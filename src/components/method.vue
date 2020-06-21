@@ -12,13 +12,13 @@ export default {
   data () {
     return {
       msg: 'Welcome',
-      kuji: "kuji",
+      kuji: "おみくじ",
       kujis: ['大吉','中吉','小吉','末吉']
     }
   },
   methods: {
     ev01(){
-      alert("hoge")
+      this.kuji = this.kujis[Math.floor(Math.random() * this.kujis.length)]
     }
   }
 }
