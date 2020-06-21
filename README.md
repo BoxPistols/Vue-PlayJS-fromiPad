@@ -1,5 +1,5 @@
-# Vue-PlayJS-fromiPad
+# Vue PlayJS from iPad
 
-## Write test
+## iPad Vue Develop / Use App Play.js 
 
 ### Need Dual keyboard / EN/JP
