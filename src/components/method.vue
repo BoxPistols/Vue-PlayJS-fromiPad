@@ -1,8 +1,14 @@
 <template>
   <div class="">
+    <h1 :style="{color: color, fontSize: size + 'em'}">{{ msg }}</h1>
+    <p>
+      <span @click="ev02()">Size + </span>
+      <span @click="ev03()">Size - </span> 
+      <span @click="ev04(+0.2)">Size Set </span>   
+    </p>
+    <hr>
     <button class="btn" @click="ev01()">Button</button>
-    <h1>{{ msg }}</h1>
-    <h2>{{ kuji }}</h2>
+    <h2 :style="[myStyle, newStyle]">{{ kuji }}</h2>
  </div>
 </template>
 
@@ -12,13 +18,35 @@ export default {
   data () {
     return {
       msg: 'Welcome',
+      color: 'orange',
+      size: 1.5,
+      // Omikuji
       kuji: "おみくじ",
-      kujis: ['大吉','中吉','小吉','末吉']
+      kujis: ['大吉','中吉','小吉','末吉'],
+      //style
+      myStyle:{
+        color: 'skyblue'
+      },
+      newStyle:{
+        'font-weight': 'normal'
+      }
     }
   },
   methods: {
     ev01(){
-      this.kuji = this.kujis[Math.floor(Math.random() * this.kujis.length)]
+    this.kuji = this.kujis[Math.floor(Math.random() * this.kujis.length)]
+    },
+    ev02(){
+      this.size += .1
+    },
+    ev03(){
+      this.size -= .1
+    },
+    ev04(value){
+      this.size += value
+    },
+    ev05(){
+      
     }
   }
 }
