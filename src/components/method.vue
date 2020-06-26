@@ -1,14 +1,23 @@
 <template>
   <div class="">
     <h1 :style="{color: color, fontSize: size + 'em'}">{{ msg }}</h1>
-    <p>
-      <span @click="ev02()">Size + </span>
-      <span @click="ev03()">Size - </span> 
+    
+    <p class="over">
+      <span @click="ev02()">Size + |</span>
+      <span @click="ev03()">Size - |</span> 
       <span @click="ev04(+0.2)">Size Set </span>   
     </p>
+    
+    <p class="bold" :class="{red: active}">active<button @click="active=!active">Active</button></p>
+    
     <hr>
+    <p :class="[red, bold]">Array Class</p>
+    
+    <hr>
+    
     <button class="btn" @click="ev01()">Button</button>
     <h2 :style="[myStyle, newStyle]">{{ kuji }}</h2>
+    
  </div>
 </template>
 
@@ -17,6 +26,9 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
+      active: false,
+      red: 'red',
+      bold: 'bold',
       msg: 'Welcome',
       color: 'orange',
       size: 1.5,
@@ -54,9 +66,23 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.over, button{
+  cursor: pointer;
+  user-select: none;
+}
+
 h1, h2 {
   font-weight: normal;
 }
+
+.red{
+  color: tomato;
+}
+.bold{
+ font-weight: 600;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
