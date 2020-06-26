@@ -1,27 +1,3 @@
-<template>
-  <div id="app">
-   <!-- <img src="./assets/logo.png"> -->
-   <!--<Method/>-->
-    <Board/>
-  </div>
-</template>
-
-<script>
-//import HelloWorld from './components/HelloWorld'
-import Method from './components/method'
-import Board from './components/Board'
-
-export default {
-  name: 'App',
-  components: {
-    Method,
-    Board
-  }
-}
-</script>
-
-<style>
-
 html {
   background: orange;
   font-family: 'Avenir', Helvetica, Arial, 'system-ui', sans-serif;
@@ -190,4 +166,3 @@ main {
   width: 100%;
   word-wrap: break-word;
 }
-</style>

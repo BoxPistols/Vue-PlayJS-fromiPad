@@ -8,9 +8,10 @@
       <span @click="ev04(+0.2)">Size Set </span>   
     </p>
     
-    <p class="bold" :class="{red: active}">active<button @click="active=!active">Active</button></p>
+    <p class="" :class="[bold, {red: active}]">active<button @click="active=!active">Active</button></p>
     
     <hr>
+    
     <p :class="[red, bold]">Array Class</p>
     
     <hr>
@@ -18,6 +19,9 @@
     <button class="btn" @click="ev01()">Button</button>
     <h2 :style="[myStyle, newStyle]">{{ kuji }}</h2>
     
+    <hr>
+    <p>面積{{ menseki(20) }}</p>
+    <p>半径{{ hankei }}</p>
  </div>
 </template>
 
@@ -26,6 +30,9 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
+      //x: 100,
+      hankei: 3,
+      //menseki: 0,
       active: false,
       red: 'red',
       bold: 'bold',
@@ -44,7 +51,13 @@ export default {
       }
     }
   },
+  computed:{
+
+  },
   methods: {
+    menseki(x){
+      return (this.hankei * 2 + x)
+    },
     ev01(){
     this.kuji = this.kujis[Math.floor(Math.random() * this.kujis.length)]
     },
