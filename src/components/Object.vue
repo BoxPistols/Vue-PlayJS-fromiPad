@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="obj">
   <h2>Component</h2>
 </div>
 </template>
@@ -8,11 +8,17 @@
 export default{
   data() {
     return {
-      
+      customers:[
+        {id: 1, name: '大竹真琴'},
+        
+      ]
     }
   }
 }
 </script>
 
-<style scoped lang="">
+<style>
+.obj{
+  color: pink
+ }
 </style>

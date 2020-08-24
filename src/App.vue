@@ -1,8 +1,8 @@
 <template>
   <div id="app">
    <!-- <img src="./assets/logo.png"> -->
-    <Method/>
-    <Time/>
+   <!-- <Method/> -->
+   <!-- <Time/> -->
     <Object/>
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
   components: {
     Method,
     Time,
-]   Object 
+    Object 
   }
 }
 </script>
