@@ -2,17 +2,23 @@
   <div id="app">
    <!-- <img src="./assets/logo.png"> -->
     <Method/>
+    <Time/>
+    <Object/>
   </div>
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld'
 import Method from './components/method'
+import Time from './components/Time'
+import Object from './components/Object'
 
 export default {
   name: 'App',
   components: {
-    Method
+    Method,
+    Time,
+]   Object 
   }
 }
 </script>
